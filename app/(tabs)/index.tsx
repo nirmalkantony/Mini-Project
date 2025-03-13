@@ -15,26 +15,22 @@ export default function Index() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ flexGrow: 1, paddingBottom: 20 }}
       >
-        {/* Logo */}
-        <Image source={icons.logo1} className="w-16 h-14 mt-20 mb-4 mx-auto" />
+        <Image source={icons.logo1} className="w-16 h-10 mt-10 mb-6 mx-auto" />
 
-        {/* Search Bar */}
         <SearchBar
           onPress={() => router.push("/search")}
           placeholder="Search for a Destination"
         />
 
-        {/* Top Destinations */}
         <TopDestinations />
 
-        {/* Custom Itineraries */}
-        <View className="mt-4">
+        <View className="mt-2 ">
           <CustomItineraries />
         </View>
-        <Text className="text-dark-100 font-semibold text-2xl mb-3">
+        <Text className="text-dark-100 font-semibold text-2xl mb-2 mt-6 px-2 py-1">
           Ente Trivandrum
         </Text>
-        <Text className="text-gray-600 text-base">
+        <Text className="text-gray-600 text-base px-3">
           Ente Trivandrum is a digital tourism guide dedicated to showcasing the
           rich **cultural and heritage sites** of Thiruvananthapuram. This app
           helps visitors explore historical landmarks, traditional art forms,
@@ -44,6 +40,7 @@ export default function Index() {
           activities**. Integrated into the **Smart City Thiruvananthapuram**
           initiative, it aims to promote local tourism while supporting artisans
           and cultural heritage.
+          {"\n\n\n\n\n\n"}
         </Text>
       </ScrollView>
     </View>

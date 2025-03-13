@@ -6,6 +6,7 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from "react-native";
+import { Dimensions } from "react-native";
 import { icons } from "@/constants/icons";
 
 interface Props {
@@ -14,11 +15,18 @@ interface Props {
 }
 
 const SearchBar = ({ placeholder, onPress }: Props) => {
+  const { width } = Dimensions.get("window");
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View
-        className="flex-row items-center bg-light-200
-       rounded-full px-5 py-4"
+        className="flex-row items-center bg-light-200 rounded-full py-1 px-5"
+        style={{
+          width: width * 0.9,
+          height: 50,
+          paddingHorizontal: 15,
+          paddingVertical: 10,
+        }}
       >
         <TouchableOpacity onPress={onPress}>
           <Image
@@ -32,7 +40,7 @@ const SearchBar = ({ placeholder, onPress }: Props) => {
         <TextInput
           onPress={onPress}
           placeholder={placeholder}
-          className="flex-1 ml-2 text-white"
+          className="flex-1 ml-3 text-white text-base"
           placeholderTextColor="#FFFFFF"
           keyboardType="default"
           autoFocus={false}

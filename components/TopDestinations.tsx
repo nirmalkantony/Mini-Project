@@ -19,6 +19,13 @@ const topDestinations = [
     type: "Cultural Site",
     rating: 4.3,
   },
+  {
+    id: 4,
+    image: images.museum,
+    name: "Napier Museum",
+    type: "Heritage Site",
+    rating: 4.4,
+  },
 ];
 
 export default function TopDestinations() {
@@ -64,16 +71,6 @@ export default function TopDestinations() {
           </View>
         ))}
       </ScrollView>
-
-      {/* Single Button Below All Images */}
-      <TouchableOpacity
-        className="bg-light-100 py-3 px-6 rounded-lg mt-4 mx-4"
-        onPress={() => router.push("/chatbot")} // Navigate to chatbot.tsx
-      >
-        <Text className="text-white text-center text-lg font-semibold">
-          Plan Your Trip
-        </Text>
-      </TouchableOpacity>
     </View>
   );
 }
