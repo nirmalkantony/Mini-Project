@@ -36,4 +36,4 @@ export default function Index() {
 //hello from nirmal
 //hello form bhagya
 //hello from saniya
-
+//frontend
