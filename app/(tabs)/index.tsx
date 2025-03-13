@@ -32,8 +32,4 @@ export default function Index() {
     </View>
   );
 }
-//hello
-//hello from nirmal
-//hello form bhagya
-//hello from saniya
-//frontend
+
