@@ -21,6 +21,23 @@ export default function RootLayout() {
           }}
         />
         <Stack.Screen
+          name="destinations/about"
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="destinations/review"
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="destinations/photo"
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="destinations/video"
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
           name="itineraries/[id]"
           options={{
             headerShown: false,

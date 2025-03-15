@@ -11,7 +11,6 @@ export default function EditProfile() {
     <View className="flex-1 bg-white p-5">
       <Text className="text-lg font-semibold mb-3">Edit Profile</Text>
 
-      {/* Profile Picture */}
       <View className="items-center mb-4">
         <Image
           source={{ uri: "https://via.placeholder.com/100" }}
@@ -19,7 +18,6 @@ export default function EditProfile() {
         />
       </View>
 
-      {/* Name Input */}
       <Text className="text-gray-600">Name</Text>
       <TextInput
         className="border border-gray-300 rounded-md p-2 mb-3"
@@ -28,7 +26,6 @@ export default function EditProfile() {
         onChangeText={setName}
       />
 
-      {/* Email Input */}
       <Text className="text-gray-600">Email</Text>
       <TextInput
         className="border border-gray-300 rounded-md p-2 mb-3"
@@ -37,7 +34,6 @@ export default function EditProfile() {
         onChangeText={setEmail}
       />
 
-      {/* Save Button */}
       <TouchableOpacity
         className="bg-blue-500 p-3 rounded-md"
         onPress={() => router.push("/(tabs)/profile")}

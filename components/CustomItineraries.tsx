@@ -4,9 +4,9 @@ import { Link, useRouter } from "expo-router";
 import Icon from "react-native-vector-icons/FontAwesome"; // FontAwesome for star icon
 
 const itineraries = [
-  { id: "1", name: "Beachside Escape", image: images.varkala, rating: 4.8 },
-  { id: "2", name: "Hill Station Retreat", image: images.ponmudi, rating: 4.7 },
-  { id: "3", name: "Spiritual Journey", image: images.Temple, rating: 4.6 },
+  { id: "1", name: "Beachside Escape", image: images.beaches, rating: 4.8 },
+  { id: "2", name: "Hill Station Retreat", image: images.hill, rating: 4.7 },
+  { id: "3", name: "Spiritual Journey", image: images.temp, rating: 4.6 },
   { id: "4", name: "Foodies Delight", image: images.food, rating: 4.6 },
 ];
 

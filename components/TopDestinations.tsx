@@ -1,7 +1,7 @@
 import { View, Image, ScrollView, Text, TouchableOpacity } from "react-native";
 import { images } from "@/constants/images";
-import { Link, useRouter } from "expo-router"; // Import useRouter for navigation
-import Icon from "react-native-vector-icons/FontAwesome"; // Import FontAwesome icons
+import { Link, useRouter } from "expo-router";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 const topDestinations = [
   { id: 1, image: images.varkala, name: "Varkala", type: "Beach", rating: 4.5 },
@@ -29,7 +29,7 @@ const topDestinations = [
 ];
 
 export default function TopDestinations() {
-  const router = useRouter(); // Initialize router
+  const router = useRouter();
 
   return (
     <View className="mt-6">
@@ -44,7 +44,7 @@ export default function TopDestinations() {
         {topDestinations.map((item) => (
           <View key={item.id} className="m-2">
             <Link href={`/destinations/${item.id}`} asChild>
-              <TouchableOpacity className="bg-gray-800 rounded-xl overflow-hidden">
+              <TouchableOpacity className=" rounded-xl overflow-hidden">
                 <Image
                   source={item.image}
                   style={{ width: 160, height: 170, borderRadius: 15 }}
@@ -53,7 +53,6 @@ export default function TopDestinations() {
               </TouchableOpacity>
             </Link>
 
-            {/* Name and Rating */}
             <View className="flex-row items-center justify-between mt-2 px-2">
               <Text className="text-dark-100 text-lg font-semibold">
                 {item.name}
@@ -66,7 +65,6 @@ export default function TopDestinations() {
               </View>
             </View>
 
-            {/* Destination Type */}
             <Text className="text-gray-500 text-sm px-2">{item.type}</Text>
           </View>
         ))}

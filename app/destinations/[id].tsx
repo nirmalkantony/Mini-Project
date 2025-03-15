@@ -66,7 +66,6 @@ export default function Details() {
 
   return (
     <View className="flex-1 bg-white">
-      {/* Image Section */}
       <View className="relative">
         <Image
           source={destination.image}
@@ -81,9 +80,7 @@ export default function Details() {
         </TouchableOpacity>
       </View>
 
-      {/* Content Section */}
       <View className="bg-white -mt-8 rounded-t-3xl p-5">
-        {/* Destination Info */}
         <Text className="text-xl font-bold">{destination.name}</Text>
         <View className="flex-row items-center mt-1">
           <Icon name="map-marker" size={16} color="green" />
@@ -94,21 +91,37 @@ export default function Details() {
           <Text className="text-gray-600 ml-1">{destination.rating}</Text>
         </View>
 
-        {/* Tabs (Placeholder) */}
         <View className="flex-row justify-around border-b mt-4 pb-2">
-          <Text className="text-green-600 font-bold">About</Text>
-          <Text className="text-gray-400">Review</Text>
-          <Text className="text-gray-400">Photo</Text>
-          <Text className="text-gray-400">Video</Text>
+          <TouchableOpacity
+            onPress={() => router.push(`/destinations/about?id=${id}`)}
+          >
+            <Text className="text-green-600 font-bold">About</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => router.push(`/destinations/review?id=${id}`)}
+          >
+            <Text className="text-gray-400">Review</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => router.push(`/destinations/photo?id=${id}`)}
+          >
+            <Text className="text-gray-400">Photo</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => router.push(`/destinations/video?id=${id}`)}
+          >
+            <Text className="text-gray-400">Video</Text>
+          </TouchableOpacity>
         </View>
 
-        {/* Description */}
         <Text className="text-gray-600 mt-3 leading-6">
           {destination.description}{" "}
           <Text className="text-green-600">Read More</Text>
         </Text>
 
-        {/* Favorite Button */}
         <TouchableOpacity className="bg-green-600 py-3 rounded-lg mt-5">
           <Text className="text-white text-center text-lg font-semibold">
             Favourite Now

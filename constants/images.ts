@@ -8,6 +8,9 @@ import museum from "@/assets/images/museum.png";
 import backwater from "@/assets/images/backwaters.png";
 import food from "@/assets/images/food.png";
 import waterfall from "@/assets/images/waterfall.png";
+import hill from "@/assets/images/hill.jpg";
+import beaches from "@/assets/images/beaches.jpg";
+import temp from "@/assets/images/temp.jpg";
 
 export const images = {
   bg,
@@ -20,4 +23,7 @@ export const images = {
   backwater,
   food,
   waterfall,
+  hill,
+  temp,
+  beaches,
 };

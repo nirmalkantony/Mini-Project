@@ -71,57 +71,51 @@ export default function ItineraryDetails() {
         </TouchableOpacity>
       </View>
 
-      {/* Content Section */}
+      {/* Details Section */}
       <View className="bg-white -mt-8 rounded-t-3xl p-5">
-        {/* Itinerary Info */}
         <Text className="text-xl font-bold">{itinerary.name}</Text>
 
-        {/* Locations */}
-        <View className="mt-2">
+        <View className="mt-2 flex-row items-center">
           <Icon name="map-marker" size={16} color="green" />
           <Text className="text-gray-600 ml-1">
             {itinerary.locations.join(" • ")}
           </Text>
         </View>
 
-        {/* Rating */}
         <View className="flex-row items-center mt-1">
           <Icon name="star" size={16} color="#FFD700" />
           <Text className="text-gray-600 ml-1">{itinerary.rating}</Text>
         </View>
 
-        {/* Duration */}
         <View className="flex-row items-center mt-1">
           <Icon name="clock-o" size={16} color="blue" />
           <Text className="text-gray-600 ml-1">{itinerary.duration}</Text>
         </View>
 
-        {/* Budget */}
         <View className="flex-row items-center mt-1">
           <Icon name="money" size={16} color="orange" />
           <Text className="text-gray-600 ml-1">{itinerary.budget}</Text>
         </View>
 
-        {/* Tabs Navigation */}
+        {/* Navigation Links */}
         <View className="flex-row justify-around border-b mt-4 pb-2">
           <Link
-            href={`/itineraries/about?id=${id}`}
+            href={`/itineraries/${id}/about`}
             className="text-green-600 font-bold"
           >
             About
           </Link>
-          <Link href={`/itineraries/review?id=${id}`} className="text-gray-400">
+          <Link href={`/itineraries/${id}/review`} className="text-gray-400">
             Review
           </Link>
-          <Link href={`/itineraries/photo?id=${id}`} className="text-gray-400">
+          <Link href={`/itineraries/${id}/photo`} className="text-gray-400">
             Photo
           </Link>
-          <Link href={`/itineraries/video?id=${id}`} className="text-gray-400">
+          <Link href={`/itineraries/${id}/video`} className="text-gray-400">
             Video
           </Link>
         </View>
 
-        {/* Description */}
         <Text className="text-gray-600 mt-3 leading-6">
           {itinerary.description}{" "}
           <Text className="text-green-600">Read More</Text>
